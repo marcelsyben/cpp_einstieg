@@ -23,7 +23,7 @@ std::string Ringliste::toString() const{
 Ringliste& Ringliste::operator<< (int a) {
 	data.insert(data.begin() + writePos, a);
 	writePos++;
-	if (writePos > data.size) writePos = 0;
+	if (writePos > data.size()) writePos = 0;
 }
 
 bool Ringliste::operator ==(const Ringliste& r) const {
@@ -34,6 +34,6 @@ bool Ringliste::operator ==(const Ringliste& r) const {
 		}
 
 	}
-	if (cnt == r.data.size) return true;
+	if (cnt == r.data.size()) return true;
 	else { return false; }
 }
